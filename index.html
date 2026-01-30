@@ -1,0 +1,2256 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <title>अखिल भारतीय धनगर समाज महासंघ, दिल्ली</title>
+    <link rel="icon" href="assets/images/favicon-2.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --bhagwa: #ff8c00;
+            --bhagwa-light: #ffb347;
+            --bhagwa-dark: #cc7000;
+            --black: #111111;
+            --white: #ffffff;
+            --gray: #555555;
+            --light-bg: #fafafa;
+            --gradient-1: linear-gradient(135deg, #ff8c00 0%, #ffb347 100%);
+            --gradient-2: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+        
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif Devanagari', serif;
+            background-color: var(--white);
+            color: var(--black);
+            line-height: 1.9;
+        }
+        
+
+        p {
+    letter-spacing: 0.2px;
+}
+
+h1, h2, h3 {
+    letter-spacing: 0.5px;
+}
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* ================= NAVBAR ================= */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--bhagwa);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--bhagwa);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo::before {
+            content: "🕉️";
+            font-size: 1.6rem;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: var(--black);
+            font-weight: 600;
+            transition: color 0.3s, transform 0.3s;
+            position: relative;
+        }
+
+        .navbar a:hover {
+            color: var(--bhagwa);
+            transform: translateY(-2px);
+        }
+
+        .navbar a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--bhagwa);
+            transition: width 0.3s;
+        }
+
+        .navbar a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--bhagwa);
+        }
+
+        /* ================= HERO SECTION ================= */
+        .hero {
+            background: var(--gradient-2);
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: var(--gradient-1);
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+        .hero-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--bhagwa);
+            box-shadow: 0 10px 40px rgba(255, 140, 0, 0.3);
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            font-size: 3rem;
+            display: block;
+    margin: 0 auto 30px;
+        }
+
+        .hero-main {
+    background: linear-gradient(180deg, #fffaf3, #ffffff);
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.hero-main .hero-image {
+    width: 260px;
+    max-width: 90%;
+    height: auto;
+    border-radius: 0px; /* NOT a circle */
+    background: white;
+    padding: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+    border: 3px solid var(--bhagwa);
+}
+
+.hero-role {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--bhagwa-dark);
+    margin-top: 10px;
+}
+
+.hero-name {
+    font-size: 1.8rem;
+    margin-top: 12px;
+    color: var(--black);
+    font-weight: 700;
+}
+
+.hero-tagline {
+    margin-top: 20px;
+    font-size: 1.05rem;
+    color: var(--gray);
+    font-weight: 600;
+}
+
+.hero-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    margin-top: 25px;
+    flex-wrap: wrap; /* mobile safe */
+}
+
+.hero-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--black);
+    
+    
+}
+
+.hero-contact-item img {
+    width: 26px;   /* 👈 THIS controls icon size */
+    height: 25px;
+    object-fit: contain;
+}
+
+.hero-contact a {
+    color: var(--bhagwa-dark);
+    text-decoration: none;
+}
+
+
+.hero-contact-item span {
+    white-space: nowrap;
+}
+
+.hero-contact-item:hover {
+    background: #ffe6cc;
+}
+
+.hero-contact-item:hover img {
+    transform: scale(1.1);
+}
+
+.parichay {
+    background: #ffffff;
+}
+
+.parichay-text {
+    font-size: 1.1rem;
+    color: var(--gray);
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 20px;
+    line-height: 1.8;
+}
+
+.parichay-highlight {
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-top: 30px;
+    padding: 15px;
+    border-top: 3px solid var(--bhagwa);
+    background: #fff7eb;
+}
+
+.parichay-block {
+    max-width: 900px;
+    margin: 0 auto 30px;
+    font-size: 1.05rem;
+    color: var(--gray);
+}
+
+.parichay-block p {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.parichay-subtitle {
+    font-size: 1.3rem;
+    color: var(--bhagwa-dark);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.parichay-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.parichay-list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+.parichay-list li::before {
+    content: "➤";
+    position: absolute;
+    left: 0;
+    color: var(--bhagwa);
+    font-weight: bold;
+}
+
+.parichay-divider {
+    width: 70px;
+    height: 3px;
+    margin: 35px auto;
+    background: linear-gradient(
+        to right,
+        var(--bhagwa),
+        var(--bhagwa-light),
+        var(--bhagwa)
+    );
+    border-radius: 6px;
+    opacity: 0.9;
+}
+
+        .main-title {
+            font-size: 3.5rem;
+            color: var(--bhagwa);
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--gray);
+        }
+
+        .text {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .quote {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--black);
+            border-left: 5px solid var(--bhagwa);
+            padding: 20px 30px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* ================= SECTION STYLES ================= */
+        .section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--bhagwa);
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--gradient-1);
+            border-radius: 2px;
+        }
+
+        /* ================= ACCORDION ================= */
+        .knowledge {
+            background: var(--light-bg);
+        }
+
+        .accordion-item {
+            border: 1px solid #e0e0e0;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+        }
+
+        .accordion-item:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .accordion-btn {
+            width: 100%;
+            background: linear-gradient(to right, #ffffff, #fff5e6);
+            border: none;
+            padding: 20px 25px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Noto Serif Devanagari', serif;
+            transition: background 0.3s;
+        }
+
+        .accordion-btn:hover {
+            background: linear-gradient(to right, #fff5e6, #ffe6cc);
+        }
+
+        .accordion-icon {
+            font-size: 1.6rem;
+            color: var(--bhagwa);
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 25px;
+            background: #fff;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .accordion-content p {
+            margin-bottom: 15px;
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        .accordion-content.open {
+    display: block;
+}
+
+        /* ===== ACCORDION WIKI LAYOUT ===== */
+.accordion-layout {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+/* LEFT TEXT */
+.accordion-text {
+    flex: 2;
+}
+
+/* RIGHT IMAGE */
+.accordion-image-wrapper {
+    flex: 1;
+    position: relative;
+}
+
+.accordion-image {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 10px;
+    border: 3px solid var(--bhagwa);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* AI badge (reuse) */
+.accordion-image-wrapper .ai-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    border-radius: 12px;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .accordion-layout {
+        flex-direction: column;
+    }
+
+    .accordion-image {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+
+        /* ================= LEGACY SECTION ================= */
+        .legacy {
+            background: var(--white);
+        }
+
+        /* ===== LEGACY UPGRADE ===== */
+
+.legacy .container {
+    max-width: 850px;
+}
+
+.legacy .text {
+    text-align: center;
+    font-size: 1.15rem;
+}
+
+.legacy .text:first-of-type {
+    font-weight: 600;
+    color: var(--black);
+}
+
+.legacy .highlight {
+    margin-top: 35px;
+    text-align: center;
+    font-size: 1.2rem;
+    border-left: none;
+    border-top: 4px solid var(--bhagwa);
+    background: linear-gradient(180deg, #fff7eb, #ffffff);
+}
+
+
+        .highlight {
+            font-weight: 600;
+            color: var(--black);
+            background: linear-gradient(120deg, #fff5e6 0%, #fff5e6 100%);
+            padding: 15px 20px;
+            border-left: 4px solid var(--bhagwa);
+            border-radius: 4px;
+            display: block;
+            margin-top: 20px;
+        }
+
+        /* ================= DYNASTY SECTION ================= */
+        .dynasty {
+            background: var(--light-bg);
+        }
+
+        .dynasty-list {
+            margin-top: 40px;
+            display: grid;
+            gap: 25px;
+        }
+
+        .dynasty-item {
+            background: white;
+            border-left: 5px solid var(--bhagwa);
+            padding: 25px;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        /* ===== DYNASTY RECORD STYLE ===== */
+
+.dynasty-item {
+    position: relative;
+    padding-left: 35px;
+}
+
+.dynasty-item::before {
+    content: '◉';
+    position: absolute;
+    left: 10px;
+    top: 28px;
+    font-size: 1.2rem;
+    color: var(--bhagwa);
+}
+
+.dynasty-item h3 {
+    font-size: 1.6rem;
+}
+
+.dynasty-item p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+
+        .dynasty-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 20px rgba(255, 140, 0, 0.2);
+        }
+
+        .dynasty-item h3 {
+            font-size: 1.5rem;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+
+        .dynasty-item span {
+            font-size: 1rem;
+            color: var(--bhagwa);
+            font-weight: 600;
+            display: inline-block;
+            background: #fff3e0;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+
+        /* ================= AHILYABAI HIGHLIGHT ================= */
+        .ahilyabai-highlight {
+            margin: 80px 0;
+            padding: 50px 40px;
+            background: var(--gradient-2);
+            border: 3px solid var(--bhagwa);
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(255, 140, 0, 0.2);
+        }
+
+        .ahilyabai-content h3 {
+            font-size: 2rem;
+            color: var(--bhagwa);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .ahilyabai-content span {
+            display: block;
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .ahilyabai-content p {
+            font-size: 1.1rem;
+            color: var(--black);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        /* ================= TIMELINE ================= */
+
+        .timeline-hint {
+            text-align: center;
+            font-size: 1rem;
+            color: var(--gray);
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .timeline-wrapper {
+            display: flex;
+            gap: 25px;
+            overflow-x: auto;
+            padding: 30px 10px 40px;
+            scroll-snap-type: x mandatory;
+        }
+
+        .timeline-wrapper::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .timeline-wrapper::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .timeline-wrapper::-webkit-scrollbar-thumb {
+            background: var(--gradient-1);
+            border-radius: 10px;
+        }
+
+        .timeline-item {
+            min-width: 280px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            padding: 25px;
+            border-radius: 12px;
+            scroll-snap-align: start;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .timeline-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(255, 140, 0, 0.3);
+        }
+
+        .timeline-item h3 {
+            font-size: 1.8rem;
+            color: var(--bhagwa);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--bhagwa-light);
+        }
+
+        /* ===== CINEMATIC TIMELINE UPGRADE ===== */
+
+.timeline {
+    background: linear-gradient(180deg, #fffaf3 0%, #ffffff 100%);
+    position: relative;
+}
+
+.timeline-wrapper {
+    position: relative;
+}
+
+/* Decorative center line */
+.timeline-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    width: 4px;
+    background: var(--gradient-1);
+    border-radius: 2px;
+}
+
+/* Timeline cards */
+.timeline-item {
+    position: relative;
+    padding-left: 35px;
+}
+
+/* Timeline dot */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 30px;
+    width: 14px;
+    height: 14px;
+    background: var(--bhagwa);
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px rgba(255,140,0,0.2);
+}
+
+/* Year badge */
+.timeline-item h3 {
+    display: inline-block;
+    background: var(--gradient-1);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+}
+
+.join-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.join-btn {
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: 1px solid var(--bhagwa);
+  background: #fff;
+  color: var(--bhagwa);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.join-btn.active {
+  background: var(--bhagwa);
+  color: #fff;
+}
+
+.join-form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+
+/* Divider*/
+
+.section-divider {
+    width: 100%;
+    max-width: 120px;
+    height: 4px;
+    margin: 50px auto;
+    background: linear-gradient(
+        to right,
+        var(--bhagwa),
+        var(--bhagwa-light),
+        var(--bhagwa)
+    );
+    border-radius: 10px;
+}
+
+
+        /* ================= INFO SECTION ================= */
+        .info {
+            background: var(--light-bg);
+        }
+
+        .info-select {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px 20px;
+            margin: 30px auto 40px;
+            display: block;
+            font-size: 1.1rem;
+            border: 2px solid var(--bhagwa);
+            border-radius: 8px;
+            font-family: 'Noto Serif Devanagari', serif;
+            background: white;
+            cursor: pointer;
+            transition: box-shadow 0.3s;
+        }
+
+        .info-select:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.2);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .info-card {
+            border: 2px solid #e0e0e0;
+            padding: 30px;
+            background: white;
+            text-align: center;
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .info-card:hover {
+            border-color: var(--bhagwa);
+            box-shadow: 0 8px 25px rgba(255, 140, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .info-card h3 {
+            color: var(--bhagwa);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .info-image {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+            border: 4px solid var(--bhagwa);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            object-fit: cover;
+        }
+
+        /* ===== INFO PLACEHOLDER UPGRADE ===== */
+
+.info-placeholder {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px dashed var(--bhagwa);
+    background: linear-gradient(135deg, #fff7eb, #fff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--bhagwa-dark);
+    line-height: 1.4;
+    margin : 0 auto 20px;
+}
+
+        .info-image,
+        .info-placeholder {
+    margin: 0 auto 20px;
+    display: flex;
+}
+
+
+        /* ================= GOALS ================= */
+        
+
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .goal-card {
+            background: white;
+            border-top: 5px solid var(--bhagwa);
+            padding: 30px 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .goal-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(255, 140, 0, 0.2);
+        }
+
+        .goal-card h3 {
+            font-size: 1.4rem;
+            color: var(--black);
+            margin-bottom: 15px;
+        }
+
+        .goal-card::before {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        /* ===== ENHANCED GOALS UI ===== */
+
+.goals {
+    background: linear-gradient(180deg, #fff 0%, #fff7eb 100%);
+}
+
+.goal-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.goal-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--gradient-1);
+}
+
+.goal-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-1);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    box-shadow: 0 6px 15px rgba(255,140,0,0.4);
+}
+
+
+        /* ================= LEADERSHIP ================= */
+        .leadership {
+            background: var(--light-bg);
+        }
+
+        .national-leader {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0;
+        }
+
+        .leader-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            max-width: 320px;
+        }
+
+        /* ===== NATIONAL LEADER SPECIAL CARD ===== */
+
+.leader-card.national {
+    border: 2px solid var(--bhagwa);
+    background: linear-gradient(180deg, #fffaf3, #ffffff);
+    position: relative;
+}
+
+.leader-card.national::before {
+    content: 'राष्ट्रीय नेतृत्व';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bhagwa);
+    color: white;
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+
+        .leader-card:hover {
+            box-shadow: 0 10px 35px rgba(255, 140, 0, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .leader-image {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+            border: 4px solid var(--bhagwa);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .leader-card h3 {
+            font-size: 1.2rem;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+
+        .leader-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--bhagwa);
+            margin-bottom: 5px;
+        }
+
+        .leader-role {
+            font-size: 1rem;
+            color: var(--gray);
+        }
+
+        /* ================= CONTACT ================= */
+        .contact {
+            background: var(--white);
+        }
+
+        .contact-box {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-left: 5px solid var(--bhagwa);
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .contact-box p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        /* ================= FOOTER ================= */
+        .footer {
+            background: var(--black);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 12px 20px;
+            }
+
+            .logo {
+                font-size: 1.1rem;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .navbar ul {
+                position: absolute;
+                top: 65px;
+                right: 20px;
+                background: white;
+                border: 2px solid var(--bhagwa);
+                flex-direction: column;
+                width: 220px;
+                display: none;
+                border-radius: 8px;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            }
+
+            .navbar ul.show {
+                display: flex;
+            }
+
+            .navbar li {
+                border-bottom: 1px solid #eee;
+            }
+
+            .navbar a {
+                padding: 15px 20px;
+                display: block;
+            }
+
+            .main-title {
+                font-size: 2.2rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section {
+                padding: 50px 15px;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            .goals-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .pdf-cover{
+            display:none;
+        }
+
+        /* ================= PRINT MODE ================= */
+@media print {
+
+     /* Force all accordion content visible */
+    .accordion-content {
+        display: block !important;
+    }
+
+    /* Remove accordion buttons (titles stay visible anyway) */
+    .accordion-btn {
+        pointer-events: none;
+    }
+
+    .accordion-icon {
+        display: none !important;
+    }
+
+    .accordion-image {
+    max-width: 180px !important;
+    margin: 0 auto 15px;
+}
+
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    /* Hide non-essential UI */
+    .navbar,
+    .menu-toggle,
+    .info-select,
+    .goal-icon,
+    .accordion-icon,
+    footer,
+    .print-btn
+     {
+        display: none !important;
+    }
+
+    body, section {
+        background: white !important;
+    }
+
+    /* Remove shadows & colors */
+    * {
+        box-shadow: none !important;
+    }
+
+        img {
+    display: block !important;
+    max-width: 100% !important;
+    page-break-inside: avoid;
+}
+
+    /* Ensure sections break cleanly */
+    section {
+        page-break-after: always;
+        padding: 30px 0;
+    }
+
+    /* Titles look official */
+    .section-title {
+        color: black;
+        font-size: 2rem;
+        border-bottom: 2px solid black;
+        padding-bottom: 10px;
+    }
+
+    /* Dynasty items */
+    .dynasty-item {
+        border-left: 3px solid black;
+        padding-left: 20px;
+        margin-bottom: 25px;
+    }
+
+    /* Timeline becomes vertical text */
+    .timeline-wrapper {
+        overflow: visible;
+        display: block;
+    }
+
+    .timeline-item {
+        page-break-inside: avoid;
+        margin-bottom: 25px;
+    }
+
+    /* Images scale properly */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .pdf-cover {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        page-break-after: always;
+    }
+
+    .pdf-cover::after {
+        content: '';
+        width: 120px;
+        height: 4px;
+        background: var(--bhagwa);
+        margin-top: 30px;
+    }
+
+    .pdf-cover h1 {
+        font-size: 2.6rem;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
+
+    .pdf-cover h2 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    .cover-subtitle {
+        font-size: 1.1rem;
+        font-style: italic;
+        margin-bottom: 40px;
+    }
+
+    .cover-note {
+        font-size: 0.9rem;
+        opacity: 0.7;
+    }
+
+}
+
+/* ===== FLOATING PRINT BUTTON ===== */
+.print-btn {
+    position: fixed;
+    top: 90px; /* below navbar */
+    right: 20px;
+    padding: 10px 16px;
+    border-radius: 30px;
+    border: 2px solid var(--bhagwa);
+    background: white;
+    color: var(--bhagwa);
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.print-btn:hover {
+    background: var(--bhagwa);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Hide button during print */
+@media print {
+    .print-btn {
+        display: none !important;
+    }
+}
+
+.transition {
+    background: linear-gradient(180deg, #ffffff 0%, #fff7eb 100%);
+}
+
+        .knowledge .accordion-item {
+    max-width: 900px;
+    margin: 0 auto 15px;
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== PRINT / PDF COVER PAGE ===== -->
+<div class="pdf-cover">
+    <h1>होळकर घराण्याची वंशावळ</h1>
+    <h2>अखिल भारतीय धनगर समाज महासंघ</h2>
+
+    <p class="cover-subtitle">
+        ऐतिहासिक वारसा • सांस्कृतिक अभिमान • लोककल्याणाची परंपरा
+    </p>
+
+    <p class="cover-note">
+        (हा दस्तऐवज माहितीपर व ऐतिहासिक संदर्भासाठी तयार करण्यात आला आहे.)
+    </p>
+</div>
+
+
+    <nav class="navbar">
+        <div class="logo">धनगर समाज</div>
+        <div class="menu-toggle" id="menuToggle">☰</div>
+        <ul id="navLinks">
+            <li><a href="#ahilyabai">अहिल्याबाई</a></li>
+            <li><a href="#goals">उद्दिष्टे</a></li>
+            <li><a href="#leaders">नेतृत्व</a></li>
+            <li><a href="#contact">संपर्क</a></li>
+        </ul>
+    </nav>
+    <section class="hero hero-main">
+  <div class="hero-content">
+
+    
+      <img
+        src="assets/images/jai-malhar.png"
+        alt="जय मल्हार"
+        class="hero-image"
+      />
+    
+
+
+    <p class="subtitle">
+      ऑल इंडिया धनगर समाज महासंघ,दिल्ली
+    </p>
+    <p style="text-align: center; font-size: 15px;">महाराष्ट्र्र प्रदेशाध्यक्ष- मा. श्री. प्रविण काकडे</p>
+
+    <p class="hero-role">
+      महाराष्ट्र राज्य प्रमुख
+    </p>
+
+    <h2 class="hero-name">
+      <!-- CHANGE NAME HERE -->
+      श्री. दीपक विनायक राहिंज
+    </h2>
+     <p style="text-align: center; font-size: 17px;">(महाराष्ट्र युवक आघाडी अध्यक्ष)</p>
+
+    <p class="hero-tagline">
+      समाज संघटन • सामाजिक न्याय • युवक सक्षमीकरण
+    </p>
+
+  </div>
+
+  <div class="hero-contact">
+  <div class="hero-contact-item">
+     
+  </div>
+  <div class="hero-contact-item">
+     <a href="tel:+91XXXXXXXXXX"><img src="/assets/images/phone.png" alt="Phone"></a>
+  </div>
+  <div class="hero-contact-item">
+     <a href="https://wa.me/91XXXXXXXXXX" target="_blank"><img src="/assets/images/whatsapp.png" alt="Whatsapp"></a>
+  </div>
+  <div class="hero-contact-item">
+     <a href="https://www.facebook.com/deepak_rahinj.9" target="_blank"><img src="/assets/images/facebook.png" alt="Facebook"></a>
+  </div>
+</div>
+</section>
+
+<div class="section-divider"></div>
+
+
+<section class="section parichay">
+  <div class="container">
+
+    <h2 class="section-title">परिचय</h2>
+
+    <!-- BASIC INFO -->
+    <div class="parichay-block">
+      <p><strong>स्थापनेचे वर्ष :</strong> सन २०१३</p>
+      <p><strong>संघटनेचे स्वरूप :</strong> समाज बांधवांना शैक्षणिक व व्यावसायिक मार्गदर्शन व मदत</p>
+    </div>
+
+    <!-- POLICY -->
+    <div class="parichay-block">
+      <h3 class="parichay-subtitle">संघटनेचे धोरण</h3>
+      <ul class="parichay-list">
+        <li>शैक्षणिक व व्यावसायिक मार्गदर्शन करणे</li>
+        <li>गुणवंत विद्यार्थ्यांचा सत्कार व मार्गदर्शन</li>
+        <li>गरजू विद्यार्थ्यांना मदतीचा हात देणे</li>
+        <li>तळागाळातील विद्यार्थ्यांना शैक्षणिक साहित्य पुरविणे</li>
+        <li>शालेय शिक्षणानंतर करिअर मार्गदर्शन</li>
+        <li>व्यवसायिकांसाठी सरकारी योजना त्यांच्यापर्यंत पोहोचविणे</li>
+        <li>समाजातून जास्तीत जास्त उद्योजक घडविणे</li>
+      </ul>
+    </div>
+    <div class="parichay-divider"></div>
+
+    <!-- OBJECTIVES -->
+    <div class="parichay-block">
+      <h3 class="parichay-subtitle">संघटनेची उद्दिष्टे</h3>
+      <ul class="parichay-list">
+        <li>मल्हारराव होळकर, यशवंतराव होळकर व अहिल्यादेवी होळकर यांच्या जयंती उत्साहात साजऱ्या करणे</li>
+        <li>‘मी धनगर’ अभिमानाने सांगण्यासाठी समाज प्रबोधन</li>
+        <li>गरिबातील गरीब मुलांसाठी ‘दत्तक योजना’ राबविणे</li>
+        <li>पुढील ५ वर्षांत १०० मुले दत्तक घेण्याचा प्रयत्न</li>
+        <li>डोंगर-दऱ्यांतील गोरगरीब मुलांना शैक्षणिक प्रवाहात आणणे</li>
+        <li>मेंढपाळ समाजबांधवांच्या मुलांना शिक्षणासाठी सहकार्य</li>
+        <li>शैक्षणिक व एस.टी. आरक्षण जनजागृती अभियान</li>
+        <li>सरकारी योजनांची माहिती समाजापर्यंत पोहोचविणे</li>
+        <li>पोटजाती, अंधश्रद्धा व बालविवाह निर्मूलन</li>
+        <li>समाज एकत्र आणण्यासाठी सातत्यपूर्ण प्रयत्न</li>
+      </ul>
+    </div>
+    <div class="parichay-divider"></div>
+
+    <p class="parichay-highlight">
+      “संघटित समाजच सक्षम समाज घडवतो.”
+    </p>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+section class="section legacy">
+  <div class="container">
+
+    <h2 class="section-title">होळकर घराण्याचा वारसा</h2>
+
+    <p class="text">
+      होळकर घराणे हे मराठा साम्राज्याच्या इतिहासातील
+      शौर्य, शिस्त व लोकाभिमुखतेचे प्रतीक आहे.
+      महाराज मल्हारराव होळकर यांनी या घराण्याची
+      भक्कम पायाभरणी केली.
+    </p>
+
+    <p class="text">
+      राजमाता अहिल्यादेवी होळकर यांनी
+      न्याय, धर्म व लोककल्याणाच्या माध्यमातून
+      या परंपरेला सुवर्णकाळ दिला.
+    </p>
+
+    <p class="text highlight">
+      हा वारसा म्हणजे सेवा, संस्कृती आणि सामाजिक जबाबदारी.
+    </p>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+    <section class="section knowledge">
+        <div class="container">
+            <h2 class="section-title">होळकर वारसा : माहिती</h2>
+            <div class="accordion-item">
+                <button class="accordion-btn">
+                    राजमाता अहिल्यादेवी होळकर
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-layout">
+                        <div class="accordion-text">
+    <p>
+        राजमाता अहिल्यादेवी होळकर या
+        भारतीय इतिहासातील दुर्मीळ अशा
+        लोककल्याणकारी शासकांपैकी एक होत्या.
+        त्यांनी इंदूर संस्थानाचे शासन
+        धर्म, न्याय आणि प्रशासनिक पारदर्शकता
+        या तत्त्वांवर उभे केले.
+    </p>
+
+    <p>
+        त्यांच्या कारकिर्दीत
+        सामान्य शेतकरी, व्यापारी,
+        स्त्री व दुर्बल घटकांना
+        न्याय मिळावा यासाठी
+        स्वतंत्र व प्रभावी न्यायव्यवस्था कार्यरत होती.
+        राजदरबार सर्वसामान्यांसाठी खुला होता,
+        ही बाब त्या काळात अपवादात्मक होती.
+    </p>
+
+    <p>
+        राजमाता अहिल्यादेवींनी
+        केवळ राज्यकारभारापुरतेच नव्हे,
+        तर संपूर्ण भारताच्या
+        धार्मिक व सांस्कृतिक पुनरुत्थानात
+        मोलाचे योगदान दिले.
+        काशी, गया, सोमनाथ, द्वारका,
+        रामेश्वर, उज्जैन यांसारख्या
+        तीर्थक्षेत्रांमध्ये त्यांनी
+        मंदिरे, घाट, धर्मशाळा व पाणवठे उभारले.
+    </p>
+
+    <p>
+        त्यांचे संपूर्ण जीवन
+        म्हणजे सत्तेचा उपयोग
+        सेवेसाठी कसा करावा,
+        याचा एक जिवंत आदर्श आहे.
+        आजच्या पिढीसाठी
+        त्यांचे कार्य
+        नेतृत्व, नीतिमत्ता आणि
+        सामाजिक जबाबदारीचे
+        प्रेरणास्थान आहे.
+    </p>
+</div>
+                <div class="accordion-image-wrapper">
+                            <img src ="assets/dynasty/ahilyabai-holkar-ai.jpg" alt = "राजमाता अहिल्यादेवी होळकर"
+                            class = "accordion-image" />
+                            <span class = "ai-badge">AI-Art</span>
+                        </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-btn">
+                    महाराज मल्हाररांव होळकर
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <div class = "accordion-layout">
+                        <div class="accordion-text">
+    <p>
+        महाराज मल्हाररांव होळकर हे
+        मराठा साम्राज्याचे पराक्रमी सेनानी
+        व होळकर घराण्याचे संस्थापक होते.
+        त्यांनी छत्रपती शाहू महाराज
+        व पेशव्यांच्या नेतृत्वाखाली
+        मराठा सत्तेचा उत्तर भारतात विस्तार केला.
+    </p>
+
+    <p>
+        युद्धकौशल्य, रणनिती आणि
+        परिस्थितीनुसार निर्णय घेण्याची क्षमता
+        यामुळे ते एक कुशल सेनापती म्हणून ओळखले जात.
+        मालवा, बुंदेलखंड व राजस्थान
+        या भागांत त्यांनी मराठा प्रभाव प्रस्थापित केला.
+    </p>
+
+    <p>
+        केवळ युद्धच नव्हे,
+        तर प्रशासन व लोकहित
+        यांनाही त्यांनी महत्त्व दिले.
+        शिस्त, निष्ठा आणि प्रजेसाठी उत्तरदायित्व
+        ही मूल्ये त्यांनी घराण्याच्या परंपरेत रुजवली.
+    </p>
+
+    <p>
+        त्यांनी उभारलेली ही भक्कम पायाभरणी
+        पुढे राजमाता अहिल्यादेवी होळकरांच्या
+        लोककल्याणकारी शासनासाठी
+        आधारस्तंभ ठरली.
+    </p>
+</div>
+
+                        <div class="accordion-image-wrapper">
+                            <img src ="assets/dynasty/malharrao-holkar-ai.jpg" alt = "महाराज मल्हाररांव होळकर"
+                            class = "accordion-image" />
+                            <span class = "ai-badge">AI-Art</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-btn">
+                    महाराज यशवंतराव होळकर
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <div class = "accordion-layout">
+                        <div class="accordion-text">
+    <p>
+        महाराज यशवंतराव होळकर हे
+        मराठा इतिहासातील
+        अत्यंत शूर, स्वाभिमानी
+        व निर्भीड योद्धा होते.
+        इंग्रज सत्तेविरुद्ध अखेरपर्यंत
+        संघर्ष करणाऱ्या
+        थोड्या मराठा सेनानींपैकी ते एक होते.
+    </p>
+
+    <p>
+        त्यांनी मराठा स्वराज्याच्या स्वातंत्र्यासाठी
+        कोणतीही तडजोड स्वीकारली नाही.
+        दिल्ली, आग्रा व उत्तर भारतातील
+        मोहिमांमध्ये त्यांनी
+        इंग्रज सैन्याला कठोर प्रतिकार दिला.
+    </p>
+
+    <p>
+        राजकीय परिस्थिती प्रतिकूल असतानाही
+        त्यांनी आत्मसन्मान आणि स्वातंत्र्य
+        या मूल्यांशी तडजोड केली नाही.
+        त्यांचे आयुष्य सतत संघर्षात गेले,
+        तरी त्यांनी धैर्य सोडले नाही.
+    </p>
+
+    <p>
+        त्यांचे नेतृत्व
+        स्वातंत्र्य, स्वाभिमान
+        आणि राष्ट्रनिष्ठेचे प्रतीक असून
+        आजही ते प्रेरणादायी ठरते.
+    </p>
+</div>
+
+                </div>
+                        <div class="accordion-image-wrapper">
+                            <img src ="assets/dynasty/yashwantrao-holkar-ai.jpg" alt = "महाराज यशवंतराव होळकर"
+                            class = "accordion-image" />
+                            <span class = "ai-badge">AI-Art</span>
+                        </div>
+
+                </div>
+                </div>
+                
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-btn">
+                    खांडेराव होळकर
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <div class = "accordion-layout">
+                        <div class="accordion-text">
+    <p>
+        खांडेराव होळकर हे
+        महाराज मल्हाररांव होळकर यांचे पुत्र
+        व राजमाता अहिल्यादेवी होळकर यांचे पती होते.
+        मराठा सैन्यात त्यांनी
+        एक पराक्रमी योद्धा म्हणून कार्य केले.
+    </p>
+
+    <p>
+        राजपूत मोहिमेदरम्यान झालेल्या
+        युद्धात त्यांचे निधन झाले.
+        त्यांचे आयुष्य अल्पकाळाचे असले,
+        तरी त्यांनी मराठा सेनेत
+        आपले शौर्य सिद्ध केले.
+    </p>
+
+    <p>
+        त्यांच्या निधनानंतर
+        राजमाता अहिल्यादेवी होळकर यांनी
+        अत्यंत संयम, धैर्य आणि विवेकाने
+        जीवनातील मोठ्या संकटाला सामोरे गेले.
+    </p>
+
+    <p>
+        खांडेराव होळकर यांचे जीवन
+        कर्तव्य, शौर्य आणि बलिदानाचे
+        प्रतीक मानले जाते.
+    </p>
+</div>
+
+                <div class="accordion-image-wrapper">
+                            <img src ="assets/dynasty/khanderao-holkar-ai.jpg" alt = "खांडेराव होळकर"
+                            class = "accordion-image" />
+                            <span class = "ai-badge">AI-Art</span>
+                </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-btn">
+                     तुकोजीराव होळकर I
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <div class = "accordion-layout">
+                       <div class="accordion-text">
+    <p>
+        तुकोजीराव होळकर I हे
+        महाराज मल्हाररांव होळकर यांचे दत्तक पुत्र होते.
+        मल्हाररांवांच्या निधनानंतर
+        त्यांनी इंदूर संस्थानाचा कारभार स्वीकारला.
+    </p>
+
+    <p>
+        त्यांच्या कारकिर्दीत
+        प्रशासनातील स्थैर्य,
+        सैन्यशक्ती आणि संस्थानाचे संरक्षण
+        यांवर विशेष भर देण्यात आला.
+        बदलत्या राजकीय परिस्थितीत
+        संस्थान टिकवणे हे त्यांचे मोठे आव्हान होते.
+    </p>
+
+    <p>
+        राजमाता अहिल्यादेवी होळकर यांच्या
+        मार्गदर्शनाखाली त्यांनी
+        राज्यकारभार अधिक सुदृढ केला
+        व परंपरेला पुढे नेले.
+    </p>
+
+    <p>
+        त्यांची कारकीर्द
+        संक्रमणकाळातील
+        संतुलित नेतृत्वाचे
+        उत्तम उदाहरण मानली जाते.
+    </p>
+</div>
+
+                <div class="accordion-image-wrapper">
+                    <img src="assets/dynasty/tukojiro-holkar-ai.jpg" alt="तुकोजीराव होळकर I"
+                    class = "accordion-image"/>
+                    <span class="ai-badge">AI-Art</span>
+                </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-btn">
+                    शिवाजीराव होळकर
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-layout">
+                        <div class="accordion-text">
+    <p>
+        शिवाजीराव होळकर यांच्या कारकिर्दीत
+        इंदूर संस्थानात
+        आधुनिक प्रशासन,
+        शिक्षणसंस्था आणि सामाजिक सुधारणा
+        यांना चालना मिळाली.
+    </p>
+
+    <p>
+        ब्रिटिश काळातील
+        बदलत्या राजकीय व प्रशासकीय व्यवस्थेत
+        संस्थानाचा कारभार सांभाळणे
+        हे त्यांच्यासमोरील मोठे आव्हान होते.
+    </p>
+
+    <p>
+        शिक्षण, सार्वजनिक व्यवस्था
+        आणि आधुनिक प्रशासनपद्धती
+        यांवर त्यांनी विशेष लक्ष दिले.
+    </p>
+
+    <p>
+        त्यांच्या कार्यकाळात
+        परंपरा आणि आधुनिकता
+        यांचा समतोल साधण्याचा
+        प्रयत्न स्पष्टपणे दिसून येतो.
+    </p>
+</div>
+
+                        <div class="accordion-image-wrapper">
+      <img 
+        src="assets/dynasty/shivajirao-holkar-ai.jpg"
+        alt="शिवाजीराव होळकर"
+        class="accordion-image"
+      />
+      <span class="ai-badge">AI Art</span>
+    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section legacy">
+        <div class="container">
+            <h2 class="section-title">होळकर घराण्याचा वारसा</h2>
+
+            <p class="text">
+                होळकर घराणे हे मराठा साम्राज्याच्या इतिहासातील
+                एक अत्यंत पराक्रमी, शिस्तबद्ध आणि लोकाभिमुख घराणे होते.
+                महाराज मल्हाररांव होळकर यांनी या घराण्याची
+                भक्कम पायाभरणी केली.
+            </p>
+
+            <p class="text">
+                या घराण्याने युद्धकौशल्याबरोबरच
+                प्रशासन, धर्मरक्षण आणि लोकल्याण यांमध्ये
+                महत्त्वपूर्ण योगदान दिले.
+                राजमाता अहिल्यादेवी होळकर यांनी
+                या परंपरेला नैतिकतेची आणि न्यायाची दिशा दिली.
+            </p>
+
+            <p class="text highlight">
+                होळकर घराण्याचा इतिहास म्हणजे
+                शौर्य, सेवा आणि संस्कृतीचा अभिमान.
+            </p>
+        </div>
+    </section>
+
+<div class="section-divider"></div>
+
+    
+
+    <section class="section transition">
+    <div class="container">
+        <h2 class="section-title">इतिहासातून वर्तमानाकडे</h2>
+
+        <p class="text" style="text-align:center;">
+            होळकर घराण्याचा गौरवशाली इतिहास,
+            राजमाता अहिल्यादेवी होळकर यांचे लोककल्याणकारी कार्य
+            आणि समाजासाठी घालून दिलेली मूल्ये
+            ही केवळ भूतकाळापुरती मर्यादित नाहीत.
+        </p>
+
+        <p class="text" style="text-align:center;">
+            आजही त्या विचारधारेतून प्रेरणा घेऊन
+            धनगर समाज संघटित होत आहे,
+            समाजकार्यासाठी कार्यरत नेतृत्व उभे राहत आहे
+            आणि पुढील पिढीसाठी दिशा निश्चित केली जात आहे.
+        </p>
+
+        <p class="highlight" style="text-align:center;">
+            खाली दिलेली माहिती ही
+            या ऐतिहासिक वारशातून उभ्या राहिलेल्या
+            आजच्या समाजकार्याची झलक आहे.
+        </p>
+    </div>
+</section>
+
+
+    <section id="info" class="section info">
+        <div class="container">
+            <h2 class="section-title">माहिती</h2>
+
+            <select id="infoFilter" class="info-select">
+                <option value="all">सर्व जिल्हे</option>
+                <option value="maharashtra">महाराष्ट्र युवक आघाडी कार्यकारिणी</option>
+                <option value="west-maharashtra">पश्चिम महाराष्ट्र युवक आघाडी कार्यकारिणी</option>
+                <option value="pune">पुणे</option>
+                <option value="satara">सातारा</option>
+                <option value="kolhapur">कोल्हापूर</option>
+                <option value="nashik">नाशिक</option>
+                <option value="ahmednagar">अहमदनगर</option>
+            </select>
+
+            <div class="info-grid">
+                <div class="info-card" data-category="maharashtra">
+                    <img src="assets/images/Deepak-Rahinj.jpg" alt="श्री. दीपक राहीज" class="info-image">
+                    <h3>श्री. दीपक राहिंज</h3>
+                    <p>महाराष्ट्र युवक आघाडी अध्यक्ष</p>
+                </div>
+
+                <div class="info-card" data-category="west-maharashtra">
+                    <div class="info-placeholder">अधिकृत<br>छायाचित्र<br>प्रलंबित</div>
+                    <h3>श्री. महेश माने</h3>
+                    <p>पश्चिम महाराष्ट्र युवक आघाडी उपाध्यक्ष</p>
+                </div>
+
+                <div class="info-card" data-category="west-maharashtra">
+                    <div class="info-placeholder">अधिकृत<br>छायाचित्र<br>प्रलंबित</div>
+                    <h3>श्री. नरसिंग नरवटे</h3>
+                    <p>पश्चिम महाराष्ट्र युवक आघाडी कार्याध्यक्ष</p>
+                </div>
+
+                <div class="info-card" data-category="west-maharashtra">
+                    <img src="assets/images/somnathOvhal.jpeg" alt="श्री. सोमनाथ ओव्हाळ" class="info-image">
+                    <h3>श्री. सोमनाथ ओव्हाळ</h3>
+                    <p>पश्चिम महाराष्ट्र युवक आघाडी संघटक</p>
+                </div>
+
+                <div class="info-card" data-category="west-maharashtra">
+                    <div class="info-placeholder">अधिकृत<br>छायाचित्र<br>प्रलंबित</div>
+                    <h3>श्री. रविंद्र दूधभाते</h3>
+                    <p>पश्चिम महाराष्ट्र युवक आघाडी संपर्कप्रमुख</p>
+                </div>
+
+                <div class="info-card" data-category="west-maharashtra">
+                    <div class="info-placeholder">अधिकृत<br>छायाचित्र<br>प्रलंबित</div>
+                    <h3>श्री. लक्ष्मण सोट</h3>
+                    <p>पश्चिम महाराष्ट्र युवक आघाडी प्रसिद्धीप्रमुख</p>
+                </div>
+
+                <div class="info-card" data-category="west-maharashtra">
+                    <div class="info-placeholder">अधिकृत<br>छायाचित्र<br>प्रलंबित</div>
+                    <h3>कु. यशोदा नाईकवाडे</h3>
+                    <p>युवाव्याख्याती</p>
+                </div>
+
+                <div class="info-card" data-category="west-maharashtra">
+                    <div class="info-placeholder">अधिकृत<br>छायाचित्र<br>प्रलंबित</div>
+                    <h3>सौ. अमृता दूधभाते</h3>
+                    <p>Legal Advisor</p>
+                </div>
+
+                <div class="info-card" data-category="west-maharashtra">
+                    <div class="info-placeholder">अधिकृत<br>छायाचित्र<br>प्रलंबित</div>
+                    <h3>सौ. सुरेखा सूर्यवंशी</h3>
+                    
+                </div>
+
+                <div class="info-card" data-category="west-maharashtra">
+                    <div class="info-placeholder">अधिकृत<br>छायाचित्र<br>प्रलंबित</div>
+                    <h3>सौ. सोनाली गावडे</h3>
+                    
+                </div>
+
+                <div class="info-card" data-category="pune">
+                    <img src="assets/images/ganeshHajare.jpeg" alt="श्री. गणेश हजारे" class="info-image">
+                    <h3>श्री. गणेश हजारे</h3>
+                    <p>पुणे युवक आघाडी अध्यक्ष</p>
+                </div>
+
+                <div class="info-card" data-category="pune">
+                    <div class="info-placeholder">अधिकृत<br>छायाचित्र<br>प्रलंबित</div>
+                    <h3>श्री. संतोष पांढरे</h3>
+                    <p>पिंपरी चिंचवड युवक आघाडी अध्यक्ष</p>
+                </div>
+
+                <div class="info-card" data-category="pune">
+                    <div class="info-placeholder">अधिकृत<br>छायाचित्र<br>प्रलंबित</div>
+                    <h3>श्री. सचिन शिंदे</h3>
+                    <p>पिंपरी चिंचवड युवक आघाडी उपाध्यक्ष</p>
+                </div>
+
+                <div class="info-card" data-category="pune">
+                    <div class="info-placeholder">अधिकृत<br>छायाचित्र<br>प्रलंबित</div>
+                    <h3>श्री. नितीन वाघमोडे</h3>
+                    <p>पिंपरी चिंचवड युवक आघाडी सचिव</p>
+                </div>
+
+                <div class="info-card" data-category="pune">
+                    <div class="info-placeholder">अधिकृत<br>छायाचित्र<br>प्रलंबित</div>
+                    <h3>श्री. दिपक काळे</h3>
+                    <p>पिंपरी चिंचवड युवक आघाडी प्रसिद्धी प्रमुख</p>
+                </div>
+
+                <div class="info-card" data-category="pune">
+                    <div class="info-placeholder">अधिकृत<br>छायाचित्र<br>प्रलंबित</div>
+                    <h3>श्री. बाबासाहेब पाटील</h3>
+                    <p>पिंपरी चिंचवड युवक आघाडी शहर संगठक</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section join-us" id="join">
+  <div class="container">
+
+    <h2 class="section-title">संपर्क साधा</h2>
+
+    <!-- TOGGLE -->
+    <div class="join-toggle">
+      <button class="join-btn active" data-type="member">
+        सदस्य होण्यासाठी
+      </button>
+      <button class="join-btn" data-type="committee">
+        समितीवर काम करण्यासाठी
+      </button>
+    </div>
+
+    <!-- FORM -->
+    <form class="join-form">
+
+      <input type="hidden" name="joinType" id="joinType" value="member">
+
+      <div class="form-group">
+        <label>पूर्ण नाव *</label>
+        <input type="text" required>
+      </div>
+
+      <div class="form-group">
+        <label>फोन नंबर *</label>
+        <input type="tel" required>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>जन्मतारीख</label>
+          <input type="date">
+        </div>
+
+        <div class="form-group">
+          <label>रक्तगट</label>
+          <select>
+            <option value="">निवडा</option>
+            <option>A+</option><option>A-</option>
+            <option>B+</option><option>B-</option>
+            <option>O+</option><option>O-</option>
+            <option>AB+</option><option>AB-</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>जिल्हा *</label>
+        <input type="text" required>
+      </div>
+
+      <div class="form-group">
+        <label>तालुका *</label>
+        <input type="text" required>
+      </div>
+
+      <button type="submit" class="submit-btn">SUBMIT</button>
+
+    </form>
+
+  </div>
+</section>
+
+    <section id="goals" class="section goals">
+        <div class="container">
+            <h2 class="section-title">धनगर समाजाचे ध्येय व उद्दिष्टे</h2>
+
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <div class="goal-icon">🤝</div>
+                    <h3>एकता व संघटन</h3>
+                    <p>
+                        धनगर समाजातील सर्व घटकांना
+                     एकत्र आणून
+                      संघटित, सशक्त व आत्मविश्वासपूर्ण
+                     सामाजिक बांधणी करणे.
+                    </p>
+                </div>
+
+                <div class="goal-card">
+                    <div class="goal-icon">📘</div>
+                    <h3>शिक्षणाचा प्रसार</h3>
+                    <p>
+                        गुणवत्तापूर्ण शिक्षणाच्या माध्यमातून
+                     युवक-युवतींना
+                       ज्ञान, कौशल्य व नेतृत्वासाठी
+                      सक्षम बनवणे.
+                    </p>
+                </div>
+
+                <div class="goal-card">
+                    <div class="goal-icon">🌱</div>
+                    <h3>सामाजिक उन्नती</h3>
+                    <p>
+                         समाजातील दुर्बल घटकांच्या
+                          सर्वांगीण विकासासाठी
+                          सामाजिक, आर्थिक व
+                           शैक्षणिक पातळीवर कार्य करणे.
+                    </p>
+                </div>
+
+                <div class="goal-card">
+                    <div class="goal-icon">🏛️</div>
+                    <h3>संस्कृती व परंपरा</h3>
+                    <p>
+                        धनगर समाजाच्या
+                      सांस्कृतिक परंपरा,
+                      इतिहास व मूल्यांचे
+                      जतन व संवर्धन करणे.
+                    </p>
+                </div>
+
+                <div class="goal-card">
+                    <div class="goal-icon">⚖️</div>
+                    <h3>न्याय व हक्क</h3>
+                    <p>
+                        समाजाच्या न्याय्य हक्कांसाठी
+                     संविधानिक व शांततामय मार्गाने
+                        संघर्ष करून
+                      न्याय मिळवणे.
+                    </p>
+                </div>
+
+                <div class="goal-card">
+                    <div class="goal-icon">🚀</div>
+                    <h3>युवक सक्षमीकरण</h3>
+                    <p>
+                        युवकांमध्ये नेतृत्वगुण,
+                     सामाजिक जाणीव व
+                       जबाबदारीची भावना
+                      निर्माण करणे.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leaders" class="section leadership">
+        <div class="container">
+            <h2 class="section-title">राष्ट्रीय नेतृत्व</h2>
+
+            <div class="national-leader">
+                <div class="leader-card national">
+                    <div class="leader-image">
+    <span style="font-size:0.9rem; font-weight:600; color:#cc7000;">
+        अधिकृत<br>छायाचित्र<br>लवकरच
+    </span>
+</div>
+                    <h3>राष्ट्रीय अध्यक्ष</h3>
+                    <p class="leader-name">प्रवीण काकडे</p>
+                    <p class="leader-role">अखिल भारतीय धनगर समाज अध्यक्ष</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">संपर्क माहिती</h2>
+
+            <div class="contact-box">
+                <p><strong>संस्था:</strong> अखिल भारतीय धनगर समाज</p>
+                <p><strong>ईमेल:</strong> official@dhangarsamaj.org</p>
+                <p><strong>फोन:</strong> +91 XXXXXXXXXX</p>
+                <p><strong>पत्ता:</strong> मुख्य कार्यालय, भारत</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© अखिल भारतीय धनगर समाज</p>
+            <p>सामाजिक, शैक्षणिक व सांस्कृतिक कार्यासाठी समर्पित</p>
+            <p style="font-size:0.85rem; opacity:0.7;">
+    सूचना: ऐतिहासिक व्यक्तींची चित्रे ही AI-आधारित कलात्मक मांडणी असून
+    ती प्रत्यक्ष छायाचित्रे नाहीत.
+</p>
+            <p style="margin-top: 15px; font-size: 0.9rem;">जय अहिल्या | जय महाराष्ट्र | जय भारत</p>
+            <p style="text-align: right; font-size: 0.9rem;">-Designed By Jatin Rahinj</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener("click", () => {
+                navLinks.classList.toggle("show");
+            });
+
+            document.querySelectorAll("#navLinks a").forEach(link => {
+                link.addEventListener("click", () => {
+                    navLinks.classList.remove("show");
+                });
+            });
+        }
+
+        // Info Filter
+        const filter = document.getElementById("infoFilter");
+        const cards = document.querySelectorAll(".info-card");
+
+        if (filter) {
+            filter.addEventListener("change", function() {
+                const value = this.value;
+                cards.forEach(card => {
+                    if (value === "all" || card.getAttribute("data-category") === value) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            });
+        }
+
+        // Accordion
+        const buttons = document.querySelectorAll(".accordion-btn");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const item = btn.parentElement;
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector(".accordion-icon");
+
+        const isOpen = content.classList.contains("open");
+
+        document.querySelectorAll(".accordion-content").forEach(c => {
+            c.classList.remove("open");
+        });
+        document.querySelectorAll(".accordion-icon").forEach(i => i.textContent = "+");
+
+        if (!isOpen) {
+            content.classList.add("open");
+            icon.textContent = "−";
+        }
+    });
+});
+    </script>
+
+    <script>
+  const buttons = document.querySelectorAll(".join-btn");
+  const joinType = document.getElementById("joinType");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      joinType.value = btn.dataset.type;
+    });
+  });
+</script>
+</body>
+</html>
